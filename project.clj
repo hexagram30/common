@@ -1,5 +1,5 @@
 (defproject hexagram30/common "0.1.0-SNAPSHOT"
-  :description "Code an utilities for common use by hexagram30 projects"
+  :description "Code and utilities for use by all hexagram30 projects"
   :url "https://github.com/hexagram30/common"
   :license {
     :name "Apache License, Version 2.0"

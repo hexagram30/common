@@ -1,14 +1,15 @@
 # hexagram30-common
 
-A Clojure library designed to ... well, that part is up to you.
+*Code and utilities for use by all hexagram30 projects*
+
 
 ## Usage
 
-FIXME
+TBD
+
 
 ## License
 
-Copyright © 2018 FIXME
+Copyright © 2018, Hexagram30
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Apache License, Version 2.0
