@@ -1,4 +1,4 @@
-# hexagram30-common
+# hexagram30/common
 
 *Code and utilities for use by all hexagram30 projects*
 
