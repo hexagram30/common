@@ -1,4 +1,4 @@
-(ns hexagram30.common.file
+(ns hxgm30.common.file
   (:require
    [clojure.edn :as edn]
    [clojure.java.io :as io]))
