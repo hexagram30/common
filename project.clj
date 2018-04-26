@@ -5,4 +5,10 @@
     :name "Apache License, Version 2.0"
     :url "http://www.apache.org/licenses/LICENSE-2.0"}
   :dependencies [
-    [org.clojure/clojure "1.8.0"]])
+    [org.clojure/clojure "1.8.0"]]
+  :profiles {
+    :test {
+      :plugins [
+        [lein-ltest "0.3.0-SNAPSHOT"]]}}
+  :aliases {
+    "ltest" ["with-profile" "+test" "ltest"]})
