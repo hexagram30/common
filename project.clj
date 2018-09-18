@@ -8,6 +8,7 @@
     [clj-wrap-indent "1.0.0"]
     [org.clojure/clojure "1.9.0"]]
   :profiles {
+    :ubercompile {:aot :all}
     :lint {
       :source-paths ^:replace ["src"]
       :test-paths ^:replace []
