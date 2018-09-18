@@ -1,5 +1,6 @@
 (ns hxgm30.common.util
   (:require
+    [clojure.string :as string]
     [clojure.walk :as walk]))
 
 (defn deep-merge
@@ -80,3 +81,14 @@
                syll-count)))
        (remove nil?)
        first))
+
+(defn wrap-string
+  [text width]
+  (re-seq (re-pattern (str ".{1," width "}\\s|.{1," width "}"))
+          (string/replace text #"\n" " ")))
+
+(defn wrap-paragraph
+  [text width]
+  (str "\n\n"
+       (wrap-string text width)
+       "\n\n"))
