@@ -5,6 +5,7 @@
     :name "Apache License, Version 2.0"
     :url "http://www.apache.org/licenses/LICENSE-2.0"}
   :dependencies [
+    [clj-wrap-indent "1.0.0"]
     [org.clojure/clojure "1.9.0"]]
   :profiles {
     :lint {

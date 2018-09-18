@@ -1,5 +1,6 @@
 (ns hxgm30.common.util
   (:require
+    [clj-wrap-indent.core :as wrap]
     [clojure.string :as string]
     [clojure.walk :as walk]))
 
@@ -82,13 +83,8 @@
        (remove nil?)
        first))
 
-(defn wrap-string
-  [text width]
-  (re-seq (re-pattern (str ".{1," width "}\\s|.{1," width "}"))
-          (string/replace text #"\n" " ")))
-
 (defn wrap-paragraph
-  [text width]
-  (str "\n\n"
-       (wrap-string text width)
-       "\n\n"))
+  [text width indent]
+  (str "\r\n"
+       (wrap/wrap-indent text width indent)
+       "\r\n"))
