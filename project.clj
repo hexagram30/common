@@ -6,6 +6,9 @@
     :url "http://www.apache.org/licenses/LICENSE-2.0"}
   :dependencies [
     [clj-wrap-indent "1.0.0"]
+    [clojusc/twig "0.4.0"]
+    [com.stuartsierra/component "0.4.0"]
+    [environ "1.1.0"]
     [org.clojure/clojure "1.10.0"]]
   :plugins [
     [org.clojure/core.rrb-vector "0.0.13"]]
@@ -50,17 +53,9 @@
       ["clean"]
       ["check-vers"]
       ["lint"]
-      ["ltest" ":all"]
-      ["uberjar"]
-      ["build-cli"]]
-    "clean-cljs" ["with-profile" "+cljs" "do"
       ["clean"]
-      ["shell" "rm" "-f" "bin/roll"]]
-    "build-cli" ["with-profile" "+cljs" "do"
-      ["cljsbuild" "once" "cli"]
-      ["shell" "chmod" "755" "bin/roll"]]
-    "clean-build-cli" ["with-profile" "+cljs" "do"
-      ["clean-cljs"]
-      ["build-cli"]]
+      ["ubercompile"]
+      ["ltest" ":all"]
+      ["uberjar"]]
     ;; Script Aliases
     "roll" ["run"]})
