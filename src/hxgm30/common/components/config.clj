@@ -1,7 +1,6 @@
 (ns hxgm30.common.components.config
   (:require
    [com.stuartsierra.component :as component]
-   [hxgm30.common.config :as config]
    [taoensso.timbre :as log]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -63,8 +62,6 @@
 
 (defn create-component
   ""
-  ([]
-    (create-component (config/data)))
-  ([cfg-data]
-    (log/trace "Built configuration:" cfg-data)
-    (map->Config {:data cfg-data})))
+  [cfg-data]
+  (log/trace "Built configuration:" cfg-data)
+  (map->Config {:data cfg-data}))

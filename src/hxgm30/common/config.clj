@@ -6,11 +6,11 @@
    [environ.core :as environ]
    [taoensso.timbre :as log]))
 
+(def config-file "hexagram30-config/common.edn")
+
 (defn base-data
-  ([]
-    (base-data config-file))
-  ([filename]
-    (file/read-edn-resource filename)))
+  [filename]
+  (file/read-edn-resource filename))
 
 (defn parse-kv
   [k v splitter-regex]
@@ -25,7 +25,7 @@
   (let [key-name (name k)]
     (when
       (or
-        (string/starts-with? key-name "cmr-")
+        (string/starts-with? key-name "hxgm30-")
         (string/starts-with? key-name "httpd-")
         (string/starts-with? key-name "logging-"))
       (parse-kv key-name v #"-"))))

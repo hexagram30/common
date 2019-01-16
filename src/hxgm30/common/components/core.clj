@@ -2,6 +2,7 @@
   (:require
     [hxgm30.common.components.config :as config]
     [hxgm30.common.components.logging :as logging]
+    [hxgm30.common.config :as config-lib]
     [com.stuartsierra.component :as component]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -9,7 +10,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (def cfg
-  {:config (config/create-component)})
+  {:config (config/create-component
+            (config-lib/data))})
 
 (def log
   {:logging (component/using
