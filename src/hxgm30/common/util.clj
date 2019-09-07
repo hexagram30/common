@@ -55,7 +55,7 @@
 (defn frequency->percent-range
   "A reducer that, given a frequency and an accumulator, returns an updated
   accumulator with the given frequency converted to a percent range (appended
-  to the accumulator). The first argument is expectred to be provided as a
+  to the accumulator). The first argument is expected to be provided as a
   partial."
   [total acc [k v]]
   (let [last-value (or (last (first (last acc))) 0)
