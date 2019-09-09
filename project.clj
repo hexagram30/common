@@ -6,21 +6,21 @@
     :url "http://www.apache.org/licenses/LICENSE-2.0"}
   :dependencies [
     [clj-wrap-indent "1.0.0"]
-    [clojusc/twig "0.4.0"]
+    [clojusc/twig "0.4.1"]
     [com.stuartsierra/component "0.4.0"]
     [environ "1.1.0"]
-    [org.clojure/clojure "1.10.0"]]
+    [org.clojure/clojure "1.10.1"]]
   :plugins [
-    [org.clojure/core.rrb-vector "0.0.13"]]
+    [org.clojure/core.rrb-vector "0.0.14"]]
   :profiles {
     :ubercompile {:aot :all}
     :lint {
       :source-paths ^:replace ["src"]
       :test-paths ^:replace []
       :plugins [
-        [jonase/eastwood "0.3.4"]
+        [jonase/eastwood "0.3.6"]
         [lein-ancient "0.6.15"]
-        [lein-kibit "0.1.6"]]}
+        [lein-kibit "0.1.7"]]}
     :test {
       :plugins [
         [lein-ltest "0.3.0"]]}}
