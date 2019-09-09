@@ -4,3 +4,7 @@ script:
 jdk:
 - openjdk8
 - openjdk11
+notifications:
+  slack:
+    rooms:
+    - hexagram30:LQkiA60LztFoZGZ0ojjbRA6m#cicd
