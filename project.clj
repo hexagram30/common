@@ -1,4 +1,4 @@
-(defproject hexagram30/common "0.2.0-SNAPSHOT"
+(defproject hexagram30/common "0.2.0"
   :description "Code and utilities for use by all hexagram30 projects"
   :url "https://github.com/hexagram30/common"
   :license {
