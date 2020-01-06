@@ -1,4 +1,4 @@
-(defproject hexagram30/common "0.2.0"
+(defproject hexagram30/common "0.2.1"
   :description "Code and utilities for use by all hexagram30 projects"
   :url "https://github.com/hexagram30/common"
   :license {
@@ -11,7 +11,7 @@
     [environ "1.1.0"]
     [org.clojure/clojure "1.10.1"]]
   :plugins [
-    [org.clojure/core.rrb-vector "0.0.14"]]
+    [org.clojure/core.rrb-vector "0.1.1"]]
   :profiles {
     :ubercompile {:aot :all}
     :lint {
@@ -20,10 +20,10 @@
       :plugins [
         [jonase/eastwood "0.3.6"]
         [lein-ancient "0.6.15"]
-        [lein-kibit "0.1.7"]]}
+        [lein-kibit "0.1.8"]]}
     :test {
       :plugins [
-        [lein-ltest "0.3.0"]]}}
+        [lein-ltest "0.4.0"]]}}
   :aliases {
     ;; Dev Aliases
     "repl" ["do"
